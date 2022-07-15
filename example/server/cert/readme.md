@@ -1,0 +1,1 @@
+This folder is used to generate certificate files for the example server

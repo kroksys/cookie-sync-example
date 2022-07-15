@@ -10,5 +10,6 @@ desktop.ini
 .vscode
 
 # Project specific
-example/server/cert/
+example/server/cert/*
+!example/server/cert/readme.md
 example/.mysql-data
