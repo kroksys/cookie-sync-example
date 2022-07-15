@@ -1,0 +1,9 @@
+localPort: "4003"
+showRequests: false
+connectionString: "user:userpw@tcp(mysql)/cookies?parseTime=true"
+tablePrefix: "ssp3_"
+host: 
+  domain: "https://ssp3.com"
+  redirect: "/redirect"
+  pixel: "/pixel"
+  cookieName: "ssp3_id"

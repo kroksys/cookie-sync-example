@@ -1,0 +1,9 @@
+localPort: "4002"
+showRequests: false
+connectionString: "user:userpw@tcp(mysql)/cookies?parseTime=true"
+tablePrefix: "ssp2_"
+host: 
+  domain: "https://ssp2.com"
+  redirect: "/redirect"
+  pixel: "/pixel"
+  cookieName: "ssp2_id"

@@ -1,0 +1,15 @@
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names 
+[alt_names]
+# Local hosts
+DNS.1 = localhost
+DNS.2 = 127.0.0.1
+DNS.3 = ::1 
+# List your domain names here
+DNS.4 = website.com
+DNS.5 = dsp.com
+DNS.6 = ssp1.com
+DNS.7 = ssp2.com
+DNS.8 = ssp3.com

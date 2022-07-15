@@ -1,0 +1,25 @@
+localPort: "4000"
+showRequests: false
+connectionString: "user:userpw@tcp(localhost:3306)/cookies?parseTime=true"
+tablePrefix: "main_"
+host: 
+  domain: "https://dsp.com"
+  redirect: "/redirect"
+  pixel: "/pixel"
+  cookieName: "dsp_id"
+partners: 
+  -
+    domain: "https://ssp1.com"
+    redirect: "/redirect"
+    pixel: "/pixel"
+    cookieName: "ssp1_id"
+  -
+    domain: "https://ssp2.com"
+    redirect: "/redirect"
+    pixel: "/pixel"
+    cookieName: "ssp2_id"
+  -
+    domain: "https://ssp3.com"
+    redirect: "/redirect"
+    pixel: "/pixel"
+    cookieName: "ssp4_id"

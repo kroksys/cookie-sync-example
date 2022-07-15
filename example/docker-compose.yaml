@@ -1,0 +1,59 @@
+version: "3.8"
+
+services:
+  nginx:
+    image: nginx:stable
+    restart: always
+    volumes:
+      - "./server/nginx.conf:/etc/nginx/nginx.conf"
+      - "./server/cert:/var/certs"
+    ports:
+      - "80:80"
+      - "443:443"
+  mysql:
+    # Since I'm using Apple silicon M1 chip I need arm/v8 build. 
+    image: mysql:8-oracle
+    platform: linux/arm64/v8
+    restart: always
+    volumes:
+      - "./.mysql-data:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: cookies
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpw
+    ports:
+      - 3306:3306
+  website:
+    build: website
+    restart: always
+    ports:
+      - 3000:3000
+  dsp:
+    build: ..
+    restart: always
+    volumes:
+      - "./dsp.yaml:/config.yaml"
+    ports:
+      - 4000:4000
+  ssp1:
+    build: ..
+    restart: always
+    volumes:
+      - "./ssp1.yaml:/config.yaml"
+    ports:
+      - 4001:4001
+  ssp2:
+    build: ..
+    restart: always
+    volumes:
+      - "./ssp2.yaml:/config.yaml"
+    ports:
+      - 4002:4002
+  ssp3:
+    build: ..
+    restart: always
+    volumes:
+      - "./ssp3.yaml:/config.yaml"
+    ports:
+      - 4003:4003
